@@ -13,6 +13,10 @@ By doing so, it's basically as if we emulate a minimalist Android environment in
 
 ## Changelog
 
+### v1.1
+
+- Added in-game physical buttons support.
+
 ### v1.0
 
 - Initial Release.
@@ -33,7 +37,7 @@ By doing so, it's basically as if we emulate a minimalist Android environment in
 - Install `libshacccg.suprx`, if you don't have it already, by following [this guide](https://samilops2.gitbook.io/vita-troubleshooting-guide/shader-compiler/extract-libshacccg.suprx).
 - Install the vpk from Release tab.
 - Obtain your copy of *Naught 2* legally for Android in form of an `.apk`.
-- Open the apk with your zip explorer, extract the following files and copy them to `ux0:data/pop2`
+- Open the apk with your zip explorer, extract the following files and copy them to `ux0:data/naught2`
   - `libS3DClient.so` from the `lib/armeabi-v7a` folder
   - `S3DMain.smf` from the `assets` folder and rename it to `S3DMain.stk`
 
