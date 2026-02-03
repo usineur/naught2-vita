@@ -23,7 +23,7 @@ By doing so, it's basically as if we emulate a minimalist Android environment in
 
 ## Setup Instructions (For End Users)
 
-- Install [kubridge](https://github.com/TheOfficialFloW/kubridge/releases/) and [FdFix](https://github.com/TheOfficialFloW/FdFix/releases/) by copying `kubridge.skprx` and `fd_fix.skprx` to your taiHEN plugins folder (usually `ux0:tai`) and adding two entries to your `config.txt` under `*KERNEL`:
+- Install [kubridge](https://github.com/bythos14/kubridge/releases/) and [FdFix](https://github.com/TheOfficialFloW/FdFix/releases/) by copying `kubridge.skprx` and `fd_fix.skprx` to your taiHEN plugins folder (usually `ux0:tai`) and adding two entries to your `config.txt` under `*KERNEL`:
 
 ```
   *KERNEL
@@ -45,32 +45,11 @@ By doing so, it's basically as if we emulate a minimalist Android environment in
 
 In order to build the loader, you'll need a [vitasdk](https://github.com/vitasdk) build fully compiled with softfp usage (Instructions here: https://github.com/vitasdk-softfp).
 
-Additionally, you'll need these libraries to be compiled as well with `-mfloat-abi=softfp` added to their CFLAGS:
+Additionally, you'll need [vitaGL](https://github.com/Rinnegatamante/vitaGL) to be compiled as well:
 
-- [libmathneon](https://github.com/Rinnegatamante/math-neon)
-
-  - ```bash
-    make install
-    ```
-
-- [vitaShaRK](https://github.com/Rinnegatamante/vitaShaRK)
-
-  - ```bash
-    make install
-    ```
-
-- [kubridge](https://github.com/TheOfficialFloW/kubridge)
-
-  - ```bash
-    mkdir build && cd build
-    cmake .. && make install
-    ```
-
-- [vitaGL](https://github.com/Rinnegatamante/vitaGL)
-
-  - ````bash
-    make SOFTFP_ABI=1 NO_DEBUG=1 HAVE_GLSL_SUPPORT=1 install
-    ````
+````bash
+make SOFTFP_ABI=1 NO_DEBUG=1 HAVE_GLSL_SUPPORT=1 install
+````
 
 After all these requirements are met, you can compile the loader with the following commands:
 
